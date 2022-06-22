@@ -1,0 +1,44 @@
+ALGORITHM checkpoin
+VAR
+
+nb_word:INTEGER:=1;
+nb_voewl :INTEGER:=0;
+c:CHAR;
+ch:STRING:="";
+
+
+BEGIN
+
+REPEAT
+
+//Reading the caracter
+write("Donner une caractère");
+read(c);
+
+
+//Add the caracter to the string ch
+ch := ch + c;
+
+
+//incremanting the voewl number if the caracter c is a voewl
+
+IF (c="a" or c="e" or c="i" c="o" c="u" c="y") THEN
+nb_voewl := nb_voewl + 1 ;
+END_IF
+
+
+//Incremanting the number of words if the caracter is a space
+
+IF (c=" ") THEN
+nb_word:= nb_word + 1 ;
+END_IF
+
+UNTIL (c = ".")
+
+
+// display the 3 results
+
+write("le nombre de mots est ",nb_word," ," le nombre des voyelles est ",nb_voewl," , et la longeur est ", long(ch))
+
+
+END
